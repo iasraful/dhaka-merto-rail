@@ -1,4 +1,5 @@
 import React, { useEffect ,useState} from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [tickets , setTickets] = useState([]);
@@ -17,7 +18,8 @@ const Home = () => {
                                 <div className="card ticketCard" style={{backgroundImage : `url('${ticket.img}')`}}>
                                     <div className="card-body  d-flex flex-column align-items-center justify-content-between">
                                         <h5 className="card-title text-white">{ticket.name}</h5>
-                                        <button onClick="" className="btn btn-primary">Buy Now</button>
+                                        
+                                        <Link to="/destination"  className="btn btn-primary">Buy Now</Link>
                                         <h2 className="card-text text-white"> ${ticket.amount} </h2>
                                     </div>
                                 </div>
