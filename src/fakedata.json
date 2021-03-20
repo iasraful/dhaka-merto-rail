@@ -1,0 +1,7 @@
+[
+    {"name" : "One Time Ticket" , "amount" : 100 , "img" : "https://i.ibb.co/xY76wsM/card1.png"},
+    {"name" : "One Day Pass" , "amount" : 500 , "img" : "https://i.ibb.co/ChLNDv8/card2.png"},
+    {"name" : "Monthly Pass" , "amount" : 1500 , "img" : "https://i.ibb.co/pKkTs7H/card3.png"},
+    {"name" : "Annual Pass" , "amount" : 900 , "img" : "https://i.ibb.co/7VrSrw5/card4.png"}
+    
+]
