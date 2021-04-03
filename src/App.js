@@ -1,14 +1,15 @@
 import "./App.css";
 import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Destination from "./Components/Destination/Destination";
+
 import Login from "./Components/Login/Login";
-import Home from "./Components/Home/Home";
+import Home from "./Components/Home";
 import Header from "./Components/Header";
-import Blog from "./Components/Blog";
-import Contact from "./Components/Contact";
 import Signup from "./Components/Login/SignUp";
 import PrivetRoute from "./Components/PrivetRoute/PrivetRoute";
+import Orders from "./Components/Orders";
+import Deals from "./Components/Deals";
+import Admin from "./Components/Admin";
 
 export const UserContext = createContext();
 
@@ -23,15 +24,15 @@ function App() {
       <Router>
           <Header />
           <Switch>
-            <PrivetRoute path="/destination">
-              <Destination/>
+            <PrivetRoute path="/deals">
+              <Deals/>
             </PrivetRoute>
-            <Route path="/blog">
-              <Blog />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
+            <PrivetRoute path="/admin">
+              <Admin />
+            </PrivetRoute>
+            <PrivetRoute path="/orders">
+              <Orders />
+            </PrivetRoute>
             <Route path="/login">
               <Login />
             </Route>

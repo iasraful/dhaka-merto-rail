@@ -28,18 +28,18 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/destination">
-                  Destination
+                <Link className="nav-link" aria-current="page" to="/orders">
+                  Orders
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/blog">
-                  Blog
+                <Link className="nav-link" aria-current="page" to="/admin">
+                  Admin
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/contact">
-                  Contact
+                <Link className="nav-link" aria-current="page" to="/deals">
+                  Deals
                 </Link>
               </li>
               <li className="nav-item">

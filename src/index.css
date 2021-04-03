@@ -15,18 +15,14 @@ code {
 
 /* home */
 .homeBg {
-  background-image: url('./images/bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height:100vh;
+  height:auto;
   width:100%;
+  background-color: fff;
+}
+.h-full{
+  min-height: 100vh;
 }
 
-.ticketCard{
-  height: 300px;
-  width: 114%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
+img.card-img-top.img-fluid {
+  height: 150px;
 }
