@@ -3,7 +3,7 @@ import React, { useEffect ,useState} from 'react';
 const ManageProduct = () => {
   const [products , setProducts] = useState([]);
     useEffect(()=>{
-        const url = 'http://localhost:3003/products';
+        const url = 'https://infinite-cove-19847.herokuapp.com/products';
         fetch(url)
         .then(res => res.json()).then(data => setProducts(data))
     })

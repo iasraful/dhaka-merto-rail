@@ -1,4 +1,7 @@
-# React Router# react-auth-iasraful
-"# addignment-10" 
-# addignment-10
-# mynew01-
+# The Super Shop #
+  ### USED ###
+# assignment-10
+# firebase
+# React + Router
+# Google Auth
+# 

@@ -13,7 +13,7 @@ export default function AddProducts() {
       imageURL: imageURL,
     };
 
-    const url = "http://localhost:3003/addProduct";
+    const url = "https://infinite-cove-19847.herokuapp.com/addProduct";
 
     fetch(url , {
       method: "POST",

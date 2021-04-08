@@ -1,3 +1,4 @@
+import { CircularProgress } from '@material-ui/core';
 import React, { useEffect ,useState} from 'react';
 import { Link } from 'react-router-dom';
 
@@ -5,19 +6,22 @@ const Home = () => {
     // const [loggedInUser, SetLoggedInUser] = useState({});
     const [products , setProducts] = useState([]);
     useEffect(()=>{
-        const url = 'http://localhost:3003/products';
+        
+        const url = 'https://infinite-cove-19847.herokuapp.com/products';
         fetch(url)
-        .then(res => res.json()).then(data => setProducts(data))
+        .then(res => res.json())
+        .then(data => setProducts(data))  //This line is done according to module 48.6 
     })
 
     // place order
-    const placeOrder = (productName) => {
+    const placeOrder = (productName, productPrice) => {
         
         const eventData = {
           name: productName,
+          price: productPrice
         };
     
-        const url = "http://localhost:3003/addOrders";
+        const url = "https://infinite-cove-19847.herokuapp.com/addOrders";
     
         fetch(url , {
           method: "POST",
@@ -42,6 +46,13 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="row">
+
+                {
+                        products.length === 0 && <div className='container-fluid text-center mt-5'>
+                            <CircularProgress  color="secondary" />
+
+                        </div>
+                    }
                     {
                         products.map(product => (
                             <div className="col-md-3 mb-3">
@@ -51,7 +62,7 @@ const Home = () => {
                                         <h5 className="card-title my-3">{product.name}</h5>
                                         <div className="d-flex align-items-center justify-content-between">
                                             <h4>$ {product.price}</h4>
-                                            <Link to="/orders" onClick={() => placeOrder(`${product.name}`)} className="btn btn-primary">Buy Now</Link>
+                                            <Link to="/orders" onClick={() => placeOrder(`${product.name}`) } className="btn btn-success">Buy Now</Link>
                                         </div>
                                     </div>
                                 </div>

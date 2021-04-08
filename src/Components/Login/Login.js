@@ -21,7 +21,8 @@ const Login = () => {
 
   const googleLogin = () => {
     firebase.initializeApp(firebaseConfig);
-    let provider = new firebase.auth.GoogleAuthProvider();
+    
+    const provider = new firebase.auth.GoogleAuthProvider();
     firebase
       .auth()
       .signInWithPopup(provider)

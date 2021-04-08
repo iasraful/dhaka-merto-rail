@@ -6,8 +6,8 @@ const Header = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            Dhaka Metro
+          <Link className="navbar-brand col-8" to="/">
+            The Super Shop
           </Link>
           <button
             className="navbar-toggler"

@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 const Orders = () => {
   const [orders , setOrders] = useState([]);
     useEffect(()=>{
-        const url = 'http://localhost:3003/orders';
+        const url = 'https://infinite-cove-19847.herokuapp.com/orders';
         fetch(url)
-        .then(res => res.json()).then(data => setOrders(data))
+        .then(res => res.json())
+        .then(data => setOrders(data))
     })
   return (
     <div className="container py-5">
@@ -23,14 +24,16 @@ const Orders = () => {
             </thead>
             <tbody>
               {
-                orders.map(product => (
+                orders.map(product =>  (
                   <tr>
                     <th>{product.name}</th>
-                    <td>1</td>
-                    <td>$10</td>
+                    <td>{1}</td>
+                    <td>{product.price}</td>
+                    <button className='btn btn-danger mt-2'>Delate</button>
                   </tr>
                 ))
-              }              
+                
+              }            
             </tbody>
           </table>
 
